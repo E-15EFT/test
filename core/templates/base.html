@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% block title %}
+        Base
+      {% endblock title %}
+    </title>
+</head>
+<body>
+  
+
+  
+        <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="{% static 'css/googlefont.css' %}"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="{% static 'css/mdbootstrap.css' %}"
+rel="stylesheet"
+/>
+<link rel="stylesheet" href="{% static 'css/tag.css' %}" />
+    </head>
+ <!-- goo -->
+ <link href='{% static "css/goo.css" %}' rel='stylesheet'>
+
+    <style>
+        .goo {
+            font-family: 'Autour One';font-size: 25px;
+             
+        }
+
+        /* body {
+            
+} */
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 1px;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 50%;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.scrolling {
+            padding: 4px;
+            height: 50vh;
+            width: 32vh;
+            overflow-x: auto;
+            /* overflow-y: auto; */
+            border: 1px solid rgb(227, 227, 227);
+            border-radius: 3px;
+            position: relative;
+        }
+        ::-webkit-scrollbar {
+        width: 1px;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 7px rgb(255, 255, 255); 
+        border-radius: 10px;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: rgb(249, 253, 255); 
+        border-radius: 0px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: rgb(249, 253, 255); 
+        }
+/* dark theme */
+
+.dark-mode {
+  background-color: rgb(57, 57, 57);
+  color: rgb(242, 242, 242);
+}
+    </style>
+
+
+<header>
+  
+    <!-- Navbar -->
+    <style>
+        
+    </style>
+    <nav id="main-navbar " class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler d-block"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#sidebarMenu"
+          aria-controls="sidebarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+  
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <span class="goo">Espére</span>
+        </a>
+        <!-- Search form -->
+        <form class="d-none d-md-flex input-group w-auto my-auto" action="" method="GET">
+          <input
+            autocomplete="off"
+            type="search"
+            class="form-control rounded"
+            placeholder='Search'
+            style="min-width: 225px;"
+            name="page"
+            id="tags"
+            aria-label="Search"
+            aria-describedby="search-addon"
+          />
+          <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
+        </form>
+  
+        <!-- Right links -->
+        <ul class="navbar-nav ms-auto d-flex flex-row">
+
+
+
+        </ul>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--Main Navigation-->
+  
+  <!--Main layout-->
+  <main style="margin-top: 58px;">
+    <div class="container pt-2"></div>
+  </main>
+  <!--Main layout-->
+
+  <!-- {% if messages %}
+  <div class="alert alert-dismissible fade show alert-info container-fluid mt-4" role="alert" data-mdb-color="warning" id="customxD"> 
+    {% for message in messages %}
+      <p style="color: black;" >{{message}}</p>
+    {% endfor %} -->
+    <!-- <strong>Holy guacamole!</strong> You should check in on some of those fields below. 
+    <button type="button" class="btn-close" data-mdb-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endif %} -->
+
+{% block content %}
+
+
+
+{% endblock content %}
+
+<style>
+  .custom{
+    backdrop-filter: blur(4px);
+  }
+  .con{
+    border-radius: 5px;
+  }
+</style>
+
+
+
+{% block footer %}
+  
+<div class="mt-1">
+
+
+    <footer class="text-center text-white " style="background-color: #f1f1f1;">
+        <!-- Grid container -->
+        <div class="container pt-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.facebook.com/abdullafajal"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.twitter.com/abdullafajal"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i
+            ></a>
+
+      
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.instagram.com/abdullafajal"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.linkedin.com/in/abdullafajal"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-dark" href="">Espére</a>
+          <!-- <span class="goo">Alpha 1: stage</span> -->
+        </div>
+        <!-- Copyright -->
+        {% endblock footer %}
+      </footer>
+      <script src="{% static 'js/tag.js' %}"></script>
+      <script>
+        $("#post-form").submit(function(e){
+            e.preventDefault();
+            });</script>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="{% static 'js/mdbootstrap.js' %}"
+></script>
+
+<!-- search  -->
+
+<script src="{% static 'js/search_ajex1.js' %}">
+</script>
+
+<script src="{% static 'js/search_ajex2.js' %}">
+</script>
+
+<link href="{% static 'css/jqueryuiclass.css' %}" rel="stylesheet"
+    type="text/css" />
+
+
+<span hidden id='personal_room'>{{request.user.id}}</span>
+
+<script>
+        const PersonalroomName = JSON.parse(document.getElementById('personal_room').textContent);
+        const PersonalSocket = new WebSocket(
+            'ws://' + window.location.host + '/ws/personal_chat/' + PersonalroomName + '/'
+        );
+        const set_online = () => {
+            setTimeout(() => {
+                PersonalSocket.send(JSON.stringify({
+                    'msg_type': 'WENT_ONLINE',
+                    'user_id': '{{request.user.id}}'
+                }));
+            }, 1000)
+        }
+
+        document.addEventListener("visibilitychange", event => {
+                if (document.visibilityState == "visible") {
+                    if (PersonalSocket.readyState === WebSocket.OPEN){
+                        PersonalSocket.send(JSON.stringify({
+                            'msg_type': 'WENT_ONLINE',
+                            'user_id': '{{request.user.id}}'
+                        }));
+                    }
+                }
+                else{
+                    if(PersonalSocket.readyState === WebSocket.OPEN){
+                                PersonalSocket.send(JSON.stringify({
+                                    'msg_type': 'WENT_OFFLINE',
+                                    'user_id': '{{request.user.id}}'
+                                }));
+                        }
+                    }
+            }
+        );
+
+        PersonalSocket.onopen = set_online();
+</script>
+
+{% block script %}
+{% endblock script %}
+
+
+</body>
+</html>
